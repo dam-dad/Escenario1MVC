@@ -11,7 +11,6 @@ public class VerController {
 		
 		view.getProgressLabel().textProperty().bind(model.valorProperty().asString());
 	
-		model.setValor(75);
 	}
 	
 	public VerView getView() {

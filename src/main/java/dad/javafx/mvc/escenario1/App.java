@@ -10,7 +10,11 @@ import javafx.stage.Stage;
 
 public class App extends Application {
 	
-	private IntegerProperty valor = new SimpleIntegerProperty();
+	// model
+	
+	private IntegerProperty valor = new SimpleIntegerProperty(50);
+	
+	// controllers
 	
 	private VerController verController;
 	private ModificarController modificarController;
@@ -35,7 +39,7 @@ public class App extends Application {
 		
 		modificarController = new ModificarController();
 		
-		valor.bind(modificarController.getModel().valorProperty());
+		modificarController.getModel().valorProperty().bindBidirectional(valor);
 		
 		Scene modificarScene = new Scene(modificarController.getView(), 320, 200);
 		

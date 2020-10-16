@@ -27,6 +27,8 @@ public class ModificarController {
 	public ModificarModel getModel() {
 		return model;
 	}
+	
+	// listeners
 
 	private void onIncrementarAction(ActionEvent e) {
 		model.setValor(model.getValor() + 1);
